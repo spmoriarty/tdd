@@ -9,10 +9,16 @@ Input:
 'bunny rabbit'
 
 Output: 
-
 'bunny rabbit!!!'
-
 */
+const { test, skip } = QUnit;
+test('addExclamationPoints should add 3 exclamation points', (expect) => {
+    const expected = 'bunny rabbit!!!';
+
+    const actual = addExclamationPoints(`${expect}`);
+
+    expect.equal(actual, expected, 'true = true');
+});
 
 export function addExclamationPoints() {
     return true;
