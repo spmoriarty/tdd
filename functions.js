@@ -163,9 +163,16 @@ Output:
 'apple'
 
 */
+test('getSecondItem should pass', (expect) => {
+    const expected = 'apple';
+
+    const actual = getSecondItem(['kiwi', 'apple', 'orange', 'plum']);
+
+    expect.deepEqual(actual, expected, 'apple');
+});
 
 export function getSecondItem(array) {
-    return true;
+    return array[1];
 }
 
 // This function should take an array and return the LAST item in the array, no matter the array's length
