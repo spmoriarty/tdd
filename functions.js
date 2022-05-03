@@ -32,38 +32,32 @@ test('this test should pass', (expect) => {
     expect.equal(actual, expected, 28);
 });
 
-// This function should take in a number and multiply it by seven
-
-/* 
-Input:
-
-4
-
-Output: 
-
-28 
-*/
 
 export function multiplyBySeven(num) {
     return `${num}` * 7;
 }
 
 // This function should take in a number and multiply it by twelve then cut the result in half
-
 /* 
 Input:
-
 4
-
 Output: 
-
 24
-
 */
+test('this test should pass', (expect) => {
+    const expected =24;
+
+    const actual = multiplyBy12ThenHalve(4);
+
+    expect.equal(actual, expected, 24);
+});
 
 export function multiplyBy12ThenHalve(num) {
-    return true;
+    return (`${num}` * 12) / 2;
 }
+
+
+
 
 // This function should take in three numbers, divide the first by the second, then multiply the result by the third
 
