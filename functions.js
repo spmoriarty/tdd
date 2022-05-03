@@ -116,9 +116,17 @@ Output:
 
 '845'
 */
+test('returnAsAString should pass', (expect) => {
+    const expected = '845';
+
+    const actual = returnAsAString(8, 4, 5);
+
+    expect.deepEqual(actual, expected, '845');
+});
 
 export function returnAsAString(firstNumber, secondNumber, thirdNumber) {
-    return true;
+    let string = (`${firstNumber}` + `${secondNumber}` + `${thirdNumber}`);
+    return string;
 }
 
 // This function should take in two numbers and return a greeting announcing that the sum of those numbers is today's lucky number
