@@ -15,14 +15,14 @@ const { test, skip } = QUnit;
 test('addExclamationPoints should add 3 exclamation points', (expect) => {
     const expected = 'bunny rabbit!!!';
 
-    const actual = addExclamationPoints(`${expect}`);
+    const actual = addExclamationPoints(`bunny rabbit`);
 
-    expect.equal(actual, expected, 'true = true');
+    expect.equal(actual, expected, 'bunny rabbit!!!');
 });
 
-export function addExclamationPoints() {
-    return true;
-}
+export function addExclamationPoints(string) {
+    return `${string}!!!`;
+};
 
 // This function should take in a number and multiply it by seven
 
