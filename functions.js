@@ -83,19 +83,26 @@ export function divideThenMultiply(firstNumber, secondNumber, thirdNumber) {
 }
 
 // This function should take in three numbers and return those numbers in an array
-
 /* 
 Input:
-
 8, 4, 5
-
 Output: 
-
 [8, 4, 5]
 */
+test('this test returnAsAnArrAY', (expect) => {
+    const expected = [8, 4, 5];
+
+    const actual = returnAsAnArray( 8, 4, 5);
+
+    expect.deepEqual(actual, expected, [8, 4, 5]);
+});
 
 export function returnAsAnArray(firstNumber, secondNumber, thirdNumber) {
-    return true;
+    let thatArray = [];
+    thatArray[0] = firstNumber;
+    thatArray[1] = secondNumber;
+    thatArray[2] = thirdNumber;
+    return thatArray;
 }
 
 // This function should take in three numbers and return those numbers mushed together as a string
