@@ -130,20 +130,26 @@ export function returnAsAString(firstNumber, secondNumber, thirdNumber) {
 }
 
 // This function should take in two numbers and return a greeting announcing that the sum of those numbers is today's lucky number
-
 /* 
 Input:
-
 8, 4
-
 Output: 
-
 'Hello! Your lucky number for the day is 12.'
 */
+test('make Lucky Greeting should pass', (expect) => {
+    const expected = 'Hello! your lucky number for this day is 12.';
+
+    const actual = makeLuckyGreeting(8, 4);
+
+    expect.equal(actual, expected, 'Hello! your lucky number for this day is 12.');
+});
 
 export function makeLuckyGreeting(firstNumber, secondNumber) {
-    return true;
+    let sum = (firstNumber + secondNumber);
+    return `Hello! your lucky number for this day is ${sum}.`;
 }
+
+
 
 // This function should take an array and return the second item in the array
 
