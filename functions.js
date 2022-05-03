@@ -210,9 +210,16 @@ Output:
 <li>Benny</li>
 
 */
+test('this test should pass', (expect) => {
+    const expected = {name: 'Benny', age: 6};
+
+    const actual = renderDogLI(Benny);
+
+    expect.equal(actual, expected, "{name: 'Benny', age: 6}");
+});
 
 export function renderDogLI(dog) {
-    return true;
+    return dog.name;
 }
 
 // This function should take a dog object and return a div with the dog's information
