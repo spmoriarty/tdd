@@ -70,9 +70,16 @@ Output:
 
 10 (because 8 divided by 4 is 2, times 5 is 10)
 */
+test('this test should pass', (expect) => {
+    const expected = 10;
+
+    const actual = divideThenMultiply(8, 4, 5);
+
+    expect.equal(actual, expected, '10');
+});
 
 export function divideThenMultiply(firstNumber, secondNumber, thirdNumber) {
-    return true;
+    return (firstNumber / secondNumber * thirdNumber);
 }
 
 // This function should take in three numbers and return those numbers in an array
