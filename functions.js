@@ -187,9 +187,16 @@ Output:
 'plum'
 
 */
+test('getLastItem should pass', (expect) => {
+    const expected = 'plum';
+
+    const actual = getLastItem(['kiwi', 'apple', 'orange', 'plum']);
+
+    expect.deepEqual(actual, expected, 'plum');
+});
 
 export function getLastItem(array) {
-    return true;
+    return array[3];
 }
 
 // This function should take a dog object and return an <li> with the name of the dog
